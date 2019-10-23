@@ -1,11 +1,13 @@
-function add(num) {
-  return (num1+num2);
-}
-var current = "";
-function enter(num) {
-  current += num;
-  console.log(num);
-}
+
+$(document).ready(function(){
+  $("form#input").submit(function(event) {
+  var input = $("input#string").val();
+  console.log(input);
+  write(resolve(input));
+  event.preventDefault();
+  });
+});
+
 function resolve(num) {
   var returnMe = eval(num);
   return returnMe;
